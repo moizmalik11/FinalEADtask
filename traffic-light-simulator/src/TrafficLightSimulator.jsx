@@ -7,9 +7,10 @@ const TrafficLightSimulator = () => {
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentLight((prevLight) => {
+                
         if (prevLight === 'red') return 'yellow';
         if (prevLight === 'yellow') return 'green';
-        return 'red'; // Reset to red after green
+        return 'red'; // Reset to red 
       });
       }, 3000);
       return () => clearInterval(interval);
@@ -22,21 +23,21 @@ const TrafficLightSimulator = () => {
             ...styles.light,
             backgroundColor: 'red',
             opacity: currentLight === 'red' ? 1 : 0.5,
-            boxShadow: currentLight === 'red' ? '0 0 20px red' : 'none',
+            boxShadow: currentLight === 'red' ? '0 0 22px red' : 'none',
           }}
         ></div><div
           style={{
             ...styles.light,
             backgroundColor: 'yellow',
             opacity: currentLight === 'yellow' ? 1 : 0.5,
-            boxShadow: currentLight === 'yellow' ? '0 0 20px yellow' : 'none',
+            boxShadow: currentLight === 'yellow' ? '0 0 22px yellow' : 'none',
           }}
         ></div>
         <div style={{
             ...styles.light,
             backgroundColor: 'green',
             opacity: currentLight === 'green' ? 1 : 0.5,
-            boxShadow: currentLight === 'green' ? '0 0 20px green' : 'none',
+            boxShadow: currentLight === 'green' ? '0 0 22px green' : 'none',
           }}
         ></div></div>
     </div>
@@ -65,7 +66,7 @@ const styles = {
     height: '60px',
     borderRadius: '50%',
     opacity: 0.5,
-    transition: 'opacity 0.3s ease-in-out, box-shadow 0.3s ease-in-out',
+    transition: 'opacity 0.25s ease-in-out, box-shadow 0.277s ease-in-out',
   },
 };
 
